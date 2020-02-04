@@ -14,7 +14,7 @@ namespace Fantastic2
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new Fantastic2Initializer());
+            //Database.SetInitializer(new Fantastic2Initializer());
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

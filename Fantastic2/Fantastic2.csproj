@@ -134,6 +134,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002041446130_InitialSchema.cs" />
+    <Compile Include="Migrations\202002041446130_InitialSchema.designer.cs">
+      <DependentUpon>202002041446130_InitialSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002041537448_CompleteStats.cs" />
+    <Compile Include="Migrations\202002041537448_CompleteStats.designer.cs">
+      <DependentUpon>202002041537448_CompleteStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Profile.cs" />
@@ -198,6 +207,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002041446130_InitialSchema.resx">
+      <DependentUpon>202002041446130_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002041537448_CompleteStats.resx">
+      <DependentUpon>202002041537448_CompleteStats.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

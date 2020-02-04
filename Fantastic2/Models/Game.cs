@@ -11,12 +11,13 @@ namespace Fantastic2.Models
     public class Game
     {
         public int ID { get; set; }
-        //[ForeignKey("HomeTeam")]
+
         //public int HomeTeamID { get; set; }
+        //[ForeignKey("HomeTeamID")]
         public virtual Team HomeTeam { get; set; }
 
-        //[ForeignKey("GuestTeam")]
-        //public int GuestTeamID{ get; set; }
+        //public int GuestTeamID { get; set; }
+        //[ForeignKey("GuestTeamID")]
         public virtual Team GuestTeam { get; set; }
         public virtual ICollection<Stats> Stats { get; set; }
     }
