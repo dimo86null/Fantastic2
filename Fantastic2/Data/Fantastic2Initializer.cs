@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using Fantastic2.Models;
 
 namespace Fantastic2.Data
 {
@@ -10,7 +11,7 @@ namespace Fantastic2.Data
     {
         protected override void Seed(Fantastic2Context context)
         {
-           
+
         }
     }
 }

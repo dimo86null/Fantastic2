@@ -131,14 +131,25 @@
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Data\Fantastic2Context.cs" />
     <Compile Include="Data\Fantastic2Initializer.cs" />
+    <Compile Include="Data\Fantastic2InterceptorLogging.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Migrations\202002102326144_MockData.cs" />
+    <Compile Include="Migrations\202002102326144_MockData.designer.cs">
+      <DependentUpon>202002102326144_MockData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\IStats.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerStats.cs" />
+    <Compile Include="Models\Position.cs" />
     <Compile Include="Models\Profile.cs" />
-    <Compile Include="Models\Stats.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\TeamStats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +209,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002102326144_MockData.resx">
+      <DependentUpon>202002102326144_MockData.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

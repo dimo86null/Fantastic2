@@ -7,6 +7,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
 using Fantastic2.Data;
+using System.Data.Entity.Infrastructure.Interception;
 
 namespace Fantastic2
 {
@@ -14,11 +15,14 @@ namespace Fantastic2
     {
         protected void Application_Start()
         {
-            Database.SetInitializer(new Fantastic2Initializer());
+            //Database.SetInitializer(new Fantastic2Initializer());
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            DbInterception.Add(new Fantastic2InterceptorLogging());
         }
     }
 }
